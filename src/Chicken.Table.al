@@ -25,6 +25,7 @@ table 50120 Chicken
         {
             DataClassification = ToBeClassified;
             Caption = 'Last Date Modified';
+            Editable = false;
         }
         field(5; Picture; MediaSet)
         {
