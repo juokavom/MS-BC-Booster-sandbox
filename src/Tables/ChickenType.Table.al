@@ -12,7 +12,7 @@ table 50121 "Chicken Type"
         }
         field(2; Description; Text[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = AccountData;
             Caption = 'Description';
         }
     }
