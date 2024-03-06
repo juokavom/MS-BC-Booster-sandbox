@@ -24,6 +24,10 @@ page 50120 "Chicken Card"
                 {
                     ToolTip = 'Specifies the value of the Chicken Type Code field.';
                 }
+                field("Chicken Type Description"; Rec."Chicken Type Description")
+                {
+                    ToolTip = 'Specifies the value of the Chicken Type Description field.';
+                }
                 field("Last Date Modified"; Rec."Last Date Modified")
                 {
                     ToolTip = 'Specifies the value of the Last Date Modified field.';

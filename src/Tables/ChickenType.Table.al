@@ -1,18 +1,18 @@
 table 50121 "Chicken Type"
 {
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
     Caption = 'Chicken Type';
 
     fields
     {
         field(1; Code; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Code';
         }
         field(2; Description; Text[100])
         {
-            DataClassification = AccountData;
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
     }
