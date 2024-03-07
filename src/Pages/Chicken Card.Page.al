@@ -36,6 +36,10 @@ page 50120 "Chicken Card"
                 {
                     ToolTip = 'Specifies the value of the Picture field.';
                 }
+                field("Eggs Produced"; Rec."Eggs Produced")
+                {
+                    ToolTip = 'Specifies the value of the Eggs produced field.';
+                }
             }
         }
     }

@@ -26,6 +26,10 @@ page 50121 "Chicken List"
                 {
                     ToolTip = 'Specifies the value of the Chicken Type Code field.';
                 }
+                field("Eggs Produced"; Rec."Eggs Produced")
+                {
+                    ToolTip = 'Specifies the value of the Eggs Produced field.';
+                }
             }
         }
     }
