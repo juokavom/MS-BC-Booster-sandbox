@@ -3,7 +3,7 @@ page 50123 "Egg Types"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "Egg Type";
+    SourceTable = "EggType";
 
     layout
     {

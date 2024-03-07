@@ -1,4 +1,4 @@
-table 50123 "Egg Type"
+table 50123 "EggType"
 {
     DataClassification = CustomerContent;
     Caption = 'Egg Type';

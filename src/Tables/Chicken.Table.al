@@ -49,7 +49,21 @@ table 50120 Chicken
             Caption = 'Eggs Produced';
             Editable = false;
             FieldClass = FlowField;
-            CalcFormula = sum("Egg Production Line".Quantity where("Chicken No." = field("No.")));
+            CalcFormula = sum("Egg Production Line".Quantity where("Chicken No." = field("No."),
+                                                                    "Egg Production Date" = field("Date Filter"),
+                                                                    "Egg Type Code" = field("Egg Type Filter")
+                                                                ));
+        }
+        field(8; "Date Filter"; Date)
+        {
+            Caption = 'Date Filter';
+            FieldClass = FlowFilter;
+        }
+        field(9; "Egg Type Filter"; Code[20])
+        {
+            Caption = 'Egg Type';
+            FieldClass = FlowFilter;
+            TableRelation = "EggType";
         }
     }
 

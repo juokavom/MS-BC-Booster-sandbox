@@ -38,14 +38,14 @@ table 50127 "Egg Production Line"
         {
             DataClassification = CustomerContent;
             Caption = 'Egg type code';
-            TableRelation = "Egg Type";
+            TableRelation = "EggType";
         }
         field(7; "Egg Type Description"; Text[100])
         {
             Caption = 'Egg type description';
             FieldClass = FlowField;
             Editable = false;
-            CalcFormula = lookup("Egg Type".Description where(Code = field("Egg Type Code")));
+            CalcFormula = lookup("EggType".Description where(Code = field("Egg Type Code")));
         }
         field(8; Quantity; Decimal)
         {
