@@ -2,8 +2,9 @@ page 50129 "Egg Production Line List"
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = None;
     SourceTable = "Egg Production Line";
+    Editable = false;
 
     layout
     {
