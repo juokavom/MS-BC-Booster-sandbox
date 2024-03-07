@@ -29,13 +29,16 @@ page 50125 "Chicken Management Rolecenter"
             group(MasterData)
             {
                 Caption = 'Master Data';
+                Image = RegisteredDocs;
                 action(ChickenList)
                 {
+                    Caption = 'Chicken List';
                     ApplicationArea = All;
                     RunObject = page "Chicken List";
                 }
                 action(ChickenTypes)
                 {
+                    Caption = 'Chicken Types';
                     ApplicationArea = All;
                     RunObject = page "Chicken Types";
                 }
@@ -43,13 +46,16 @@ page 50125 "Chicken Management Rolecenter"
             group(Documents)
             {
                 Caption = 'Documents';
+                Image = List;
                 action(EggProduction)
                 {
+                    Caption = 'Egg Production List';
                     ApplicationArea = All;
                     RunObject = page "Egg Production List";
                 }
                 action(EggTypes)
                 {
+                    Caption = 'Egg Types';
                     ApplicationArea = All;
                     RunObject = page "Egg Types";
                 }
@@ -74,7 +80,7 @@ page 50125 "Chicken Management Rolecenter"
             action(eEggProduction)
             {
                 ApplicationArea = All;
-                Caption = 'Egg Production';
+                Caption = 'Egg Production List';
                 RunObject = page "Egg Production List";
             }
             action(eEggTypes)
