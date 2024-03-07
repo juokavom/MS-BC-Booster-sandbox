@@ -2,7 +2,7 @@ table 50123 EggType
 {
     DataClassification = CustomerContent;
     Caption = 'Egg Type';
-
+    LookupPageId = "Egg Types";
     fields
     {
         field(1; Code; Code[20])
