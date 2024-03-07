@@ -3,21 +3,24 @@ page 50126 "Egg Production Document"
     PageType = Document;
     ApplicationArea = All;
     UsageCategory = Documents;
-    SourceTable = "Production Header";
+    SourceTable = "Egg Production Header";
 
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            group(General)
             {
+                Caption = 'General';
                 field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Number field.';
                 }
                 field("Document Date"; Rec."Document Date")
                 {
-                    ToolTip = 'Specifies the value of the Document Date field.';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Document Dbate field.';
                 }
             }
             part(Lines; "Egg Production Subpage")
@@ -27,23 +30,4 @@ page 50126 "Egg Production Document"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

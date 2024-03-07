@@ -1,7 +1,8 @@
-table 50127 "Production Line"
+table 50127 "Egg Production Line"
 {
     DataClassification = CustomerContent;
     Caption = 'Production Line';
+    DrillDownPageId = "Egg Production List";
 
     fields
     {
@@ -25,6 +26,7 @@ table 50127 "Production Line"
         {
             FieldClass = FlowField;
             Caption = 'Chicken description';
+            Editable = false;
             CalcFormula = lookup(Chicken.Description where("No." = field("Chicken No.")));
         }
         field(5; "Egg Production Date"; Date)
@@ -36,17 +38,20 @@ table 50127 "Production Line"
         {
             DataClassification = CustomerContent;
             Caption = 'Egg type code';
+            TableRelation = EggType;
         }
         field(7; "Egg Type Description"; Text[100])
         {
             Caption = 'Egg type description';
             FieldClass = FlowField;
+            Editable = false;
             CalcFormula = lookup(EggType.Description where(Code = field("Egg Type Code")));
         }
         field(8; Quantity; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Quantity';
+            DecimalPlaces = 2 : 0;
         }
     }
 
@@ -57,33 +62,4 @@ table 50127 "Production Line"
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-        // Add changes to field groups here
-    }
-
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
-
 }

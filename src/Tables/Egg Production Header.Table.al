@@ -1,4 +1,4 @@
-table 50126 "Production Header"
+table 50126 "Egg Production Header"
 {
     DataClassification = CustomerContent;
     Caption = 'Production Header';
