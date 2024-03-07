@@ -9,7 +9,7 @@ page 50123 "Egg Types"
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(General)
             {
 
                 field("Code"; Rec."Code")

@@ -10,7 +10,7 @@ page 50122 "Chicken Types"
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(GroupName)
             {
                 field("Code"; Rec."Code")
                 {
