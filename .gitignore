@@ -1,4 +1,4 @@
-.vscode/.alcache
-.alpackages/
-.snapshots/
+*/.vscode/.alcache/
+*.alpackages/
+*.snapshots/
 *.app
