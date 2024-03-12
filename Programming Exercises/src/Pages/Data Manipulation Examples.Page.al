@@ -64,6 +64,42 @@ page 55104 "Data Manipulation Examples"
                         Message('%1', Item);
                 end;
             }
+            action(GetCustomersFromAtlanta)
+            {
+                ApplicationArea = All;
+                Caption = 'Get Customers From Atlanta';
+                ToolTip = 'Get Customers From Atlanta';
+                Image = SalesPurchaseTeam;
+
+                trigger OnAction()
+                var
+                    Customer: Record Customer;
+                begin
+                    Customer.SetRange(City, 'Atlanta');
+                    if Customer.FindSet() then
+                        repeat
+                            Message('%1', Customer)
+                        until Customer.Next() = 0;
+                end;
+            }
+            action(GetCustomersNotFromAtlanta)
+            {
+                ApplicationArea = All;
+                Caption = 'Get Customers Not From Atlanta';
+                ToolTip = 'Get Customers Not From Atlanta';
+                Image = SalesPurchaseTeam;
+
+                trigger OnAction()
+                var
+                    Customer: Record Customer;
+                begin
+                    Customer.SetFilter(City, '<>Atlanta');
+                    if Customer.FindSet() then
+                        repeat
+                            Message('%1', Customer)
+                        until Customer.Next() = 0;
+                end;
+            }
         }
     }
 }
