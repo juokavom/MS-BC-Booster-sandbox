@@ -49,6 +49,21 @@ page 55104 "Data Manipulation Examples"
                     until Vendor.Next() = 0;
                 end;
             }
+            action(GetItem)
+            {
+                ApplicationArea = All;
+                Caption = 'Get Item';
+                ToolTip = 'Get Item';
+                Image = GeneralPostingSetup;
+
+                trigger OnAction()
+                var
+                    Item: Record Item;
+                begin
+                    if Item.Get('1900-S') then
+                        Message('%1', Item);
+                end;
+            }
         }
     }
 }
