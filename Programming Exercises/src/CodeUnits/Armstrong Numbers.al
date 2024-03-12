@@ -51,6 +51,7 @@ codeunit 55101 "Armstrong Numbers"
             isArmstrong := false;
             isArmstrong := EvaluateArmstrongNumber(i);
             if isArmstrong then SelectedArmstrongNumbers := SelectedArmstrongNumbers + Format(i) + ', ';
+            // Sleep(1000);
         end;
 
         Dialog.Close();
