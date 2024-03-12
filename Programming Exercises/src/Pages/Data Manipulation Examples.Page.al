@@ -27,7 +27,8 @@ page 55104 "Data Manipulation Examples"
                 var
                     Customer: Record Customer;
                 begin
-                    Customer.FindFirst();
+                    // Customer.FindFirst();
+                    Customer.FindLast();
                     Message('%1', Customer);
                 end;
             }
