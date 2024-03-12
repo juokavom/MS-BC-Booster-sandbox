@@ -32,6 +32,23 @@ page 55104 "Data Manipulation Examples"
                     Message('%1', Customer);
                 end;
             }
+            action(LoopOverAllVendors)
+            {
+                Caption = 'Loop all Vendors';
+                ToolTip = 'Loop all Vendors';
+                ApplicationArea = All;
+                Image = Find;
+
+                trigger OnAction()
+                var
+                    Vendor: Record Vendor;
+                begin
+                    Vendor.FindSet();
+                    repeat
+                        Message('%1', Vendor);
+                    until Vendor.Next() = 0;
+                end;
+            }
         }
     }
 }
