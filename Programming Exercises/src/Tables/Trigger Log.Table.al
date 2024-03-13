@@ -35,6 +35,7 @@ table 55101 "Trigger Log"
             Clustered = true;
         }
     }
+
     var
         myInt: Integer;
 
@@ -59,10 +60,8 @@ table 55101 "Trigger Log"
     end;
 
     procedure ClearLogEntries()
-    var
-        TriggerLog: Record "Trigger Log";
     begin
-        if TriggerLog.Count() > 0 then TriggerLog.DeleteAll();
+        if Count() > 0 then DeleteAll();
     end;
 
     trigger OnInsert()

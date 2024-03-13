@@ -32,4 +32,24 @@ page 55107 "Trigger Log List"
             }
         }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(Clear)
+            {
+                ApplicationArea = All;
+                Image = ClearLog;
+                Caption = 'Clear Log Entries';
+
+                trigger OnAction()
+                var
+                    TriggerLogRec: Record "Trigger Log";
+                begin
+                    TriggerLogRec.ClearLogEntries();
+                end;
+            }
+        }
+    }
 }
