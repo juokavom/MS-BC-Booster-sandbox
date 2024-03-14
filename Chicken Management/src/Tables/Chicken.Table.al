@@ -93,6 +93,6 @@ table 50120 Chicken
     begin
         Clear(EggProductionLine);
         EggProductionLine.SetFilter("Chicken No.", Rec."No.");
-        if EggProductionLine.FindFirst() then Error(ChickenHasEggsErr);
+        if EggProductionLine.FindFirst() then Error(ChickenHasEggsErr, rec."No.", rec.Description);
     end;
 }
