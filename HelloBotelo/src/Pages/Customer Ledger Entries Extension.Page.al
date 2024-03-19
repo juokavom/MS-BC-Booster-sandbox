@@ -7,6 +7,7 @@ pageextension 50100 "Customer Ledger Entries Ext" extends "Customer Ledger Entri
             part("Customer Reminders Factbox"; "Customer Reminders Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer Entry No." = field("Entry No.");
             }
         }
     }

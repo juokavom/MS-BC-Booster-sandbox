@@ -7,6 +7,7 @@ pageextension 50101 "Customer List Ext" extends "Customer List"
             part("Customer Reminders Factbox"; "Customer Reminders Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer No." = field("No.");
             }
         }
     }
