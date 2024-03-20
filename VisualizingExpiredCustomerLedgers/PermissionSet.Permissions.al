@@ -1,3 +1,4 @@
+#pragma warning disable AL0432
 permissionset 50105 Permissions
 {
     Assignable = true;
@@ -375,3 +376,4 @@ permissionset 50105 Permissions
         codeunit "Threshold Setup Management" = X,
         page "Threshold Setup" = X;
 }
+#pragma warning restore AL0432
