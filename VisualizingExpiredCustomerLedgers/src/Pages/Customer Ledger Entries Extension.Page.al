@@ -64,9 +64,11 @@ pageextension 50111 "Customer Ledger Entries Ext" extends "Customer Ledger Entri
     procedure ShowThresholdSetupNotification()
     var
         ThresholdSetupNotification: Notification;
+        NotificationCaptionLabel: Label 'Click here to run the ThresholdSetup';
+        NotificationMethodLabel: Label 'RunThresholdSetup';
     begin
         ThresholdSetupNotification.Message('You need to run the Threshold Setup: ');
-        ThresholdSetupNotification.AddAction('Click here to run the ThresholdSetup', Codeunit::"Threshold Setup Management", 'RunThresholdSetup');
+        ThresholdSetupNotification.AddAction(NotificationCaptionLabel, Codeunit::"Threshold Setup Management", NotificationMethodLabel);
         ThresholdSetupNotification.Send();
     end;
 }
