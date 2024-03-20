@@ -1,4 +1,4 @@
-codeunit 50100 "Threshold Setup Management"
+codeunit 50115 "Threshold Setup Management"
 {
     procedure RunThresholdSetup(var TresholdSetupNotification: Notification)
     var

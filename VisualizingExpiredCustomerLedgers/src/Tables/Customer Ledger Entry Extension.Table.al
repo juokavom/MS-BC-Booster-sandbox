@@ -1,4 +1,4 @@
-tableextension 50101 "Cust. Ledger Entry Ext" extends "Cust. Ledger Entry"
+tableextension 50115 "Cust. Ledger Entry Ext" extends "Cust. Ledger Entry"
 {
     procedure GetNumberOfDaysExpired(): Integer
     var

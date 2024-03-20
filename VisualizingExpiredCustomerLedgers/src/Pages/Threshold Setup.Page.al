@@ -1,4 +1,4 @@
-page 50110 "Threshold Setup"
+page 50115 "Threshold Setup"
 {
     PageType = Card;
     ApplicationArea = All;
