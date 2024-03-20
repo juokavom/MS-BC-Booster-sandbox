@@ -39,14 +39,6 @@ page 50110 "Threshold Setup"
     var
         TresholdSetupRec: Record "Threshold Setup";
     begin
-        if TresholdSetupRec.IsEmpty() then begin
-            Clear(TresholdSetupRec);
-            TresholdSetupRec."Primary Key" := 'THRSH01';
-            TresholdSetupRec."Threshold 1 Value" := 1;
-            TresholdSetupRec."Threshold 1 Style" := "Style Type"::None;
-            TresholdSetupRec."Threshold 2 Value" := 2;
-            TresholdSetupRec."Threshold 2 Style" := "Style Type"::Ambiguous;
-            TresholdSetupRec.Insert();
-        end;
+        if not Rec.Get() then Rec.Insert();
     end;
 }
