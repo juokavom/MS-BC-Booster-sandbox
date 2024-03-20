@@ -10,7 +10,6 @@ tableextension 50121 "Sales Header Archive Ext" extends "Sales Header Archive"
         {
             DataClassification = CustomerContent;
             Editable = false;
-            // Todo: Assign date on status set
         }
         field(50122; "Won/Lost Reason Code"; Code[10])
         {
@@ -20,7 +19,7 @@ tableextension 50121 "Sales Header Archive Ext" extends "Sales Header Archive"
                         "Close Opportunity Code" where(Type = filter(Won))
             else if ("Won/Lost Quote Status" = const("Won Lost Status"::Lost))
                         "Close Opportunity Code" where(Type = filter(Lost));
-
+            ValidateTableRelation = false;
         }
         field(50123; "Won/Lost Reason Desc"; Text[100])
         {
@@ -35,8 +34,8 @@ tableextension 50121 "Sales Header Archive Ext" extends "Sales Header Archive"
         }
     }
 
-    procedure SetWonLostAssignDate()
+    procedure SetWonLostAssignDateIfEmpty()
     begin
-        Rec."Won/Lost Date" := System.CurrentDateTime();
+        if "Won/Lost Date" = 0DT then "Won/Lost Date" := CurrentDateTime();
     end;
 }

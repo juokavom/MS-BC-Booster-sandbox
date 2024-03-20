@@ -5,12 +5,16 @@ tableextension 50120 "Sales Header Ext" extends "Sales Header"
         field(50120; "Won/Lost Quote Status"; Enum "Won Lost Status")
         {
             DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                SetWonLostAssignDateIfEmpty();
+            end;
         }
         field(50121; "Won/Lost Date"; DateTime)
         {
             DataClassification = CustomerContent;
             Editable = false;
-            // Todo: Assign date on status set
         }
         field(50122; "Won/Lost Reason Code"; Code[10])
         {
@@ -35,8 +39,8 @@ tableextension 50120 "Sales Header Ext" extends "Sales Header"
         }
     }
 
-    procedure SetWonLostAssignDate()
+    procedure SetWonLostAssignDateIfEmpty()
     begin
-        Rec."Won/Lost Date" := System.CurrentDateTime();
+        if "Won/Lost Date" = 0DT then "Won/Lost Date" := CurrentDateTime();
     end;
 }
