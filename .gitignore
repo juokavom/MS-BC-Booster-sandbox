@@ -2,3 +2,4 @@
 *.alpackages/
 *.snapshots/
 *.app
+.vscode/.altemplates/
