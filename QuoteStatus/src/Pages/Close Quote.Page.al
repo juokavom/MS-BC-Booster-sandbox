@@ -29,7 +29,7 @@ page 50120 "Close Quote"
 
     procedure SetEditableBasedOnQuoteStatus()
     begin
-        Editable := Rec."Won/Lost Quote Status" = "Won Lost Status"::Won;
+        Editable := Rec."Won/Lost Quote Status" <> "Won Lost Status"::Won;
     end;
 
     procedure ShowError(Message: Text; Details: Text)
