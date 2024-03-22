@@ -15,6 +15,7 @@ page 50120 "Close Quote"
         {
             group(General)
             {
+                Caption = 'General';
                 field("Won/Lost Quote Status"; Rec."Won/Lost Quote Status")
                 {
                     ApplicationArea = All;

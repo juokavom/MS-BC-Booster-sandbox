@@ -1,10 +1,22 @@
 codeunit 50121 "Quote Status Mgmt"
 {
-    procedure CloseQuote()
-    var
-        ArchiveManagement: Codeunit ArchiveManagement;
-        SalesHeader: Record "Sales Header";
+    procedure CloseQuote(var SalesHeader: Record "Sales Header")
     begin
-        ArchiveManagement.ArchiveSalesDocument(SalesHeader);
+        ArchiveSalesQuote(SalesHeader);
+    end;
+
+    local procedure ArchiveSalesQuote(var SalesHeader: Record "Sales Header")
+    var
+        SalesSetup: Record "Sales & Receivables Setup";
+        ArchiveManagement: Codeunit ArchiveManagement;
+    begin
+        SalesSetup.Get();
+
+        case SalesSetup."Archive Quotes" of
+            SalesSetup."Archive Quotes"::Always:
+                ArchiveManagement.ArchSalesDocumentNoConfirm(SalesHeader);
+            SalesSetup."Archive Quotes"::Question:
+                ArchiveManagement.ArchiveSalesDocument(SalesHeader);
+        end;
     end;
 }

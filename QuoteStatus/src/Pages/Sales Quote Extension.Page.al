@@ -39,29 +39,17 @@ pageextension 50120 "Sales Quote Ext" extends "Sales Quote"
 
     actions
     {
-        addfirst(Creation)
+        addfirst(Create)
         {
-            action(Action1)
+            action(CloseQuote)
             {
                 ApplicationArea = All;
-                Caption = 'Action';
-                ToolTip = 'Action';
+                Caption = '&Close Quote';
                 Image = Close;
-                trigger OnAction()
-                begin
-                    OnActionClick();
-                end;
-            }
-        }
-
-        addfirst(Processing)
-        {
-            action(Action2)
-            {
-                ApplicationArea = All;
-                Caption = 'Action';
-                ToolTip = 'Action';
-                Image = Close;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                ToolTip = 'Closes the sales quote and archives.';
 
                 trigger OnAction()
                 begin
@@ -76,6 +64,6 @@ pageextension 50120 "Sales Quote Ext" extends "Sales Quote"
         CloseQuote: Page "Close Quote";
         CloseQuoteMgmt: Codeunit "Quote Status Mgmt";
     begin
-        if CloseQuote.RunModal() = Action::LookupOK then CloseQuoteMgmt.CloseQuote();
+        if CloseQuote.RunModal() = Action::LookupOK then CloseQuoteMgmt.CloseQuote(Rec);
     end;
 }
