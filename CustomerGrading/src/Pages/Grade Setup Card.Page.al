@@ -11,14 +11,10 @@ page 50132 "Grade Setup Card"
     {
         area(Content)
         {
-            group(General)
+            group(Numbering)
             {
+                Caption = 'Numbering';
 
-                field("Primary Key"; Rec."Primary Key")
-                {
-                    ToolTip = 'Specifies the value of the Primary Key field.';
-                    ApplicationArea = All;
-                }
                 field("Grade Nos."; Rec."Grade Nos.")
                 {
                     ToolTip = 'Specifies the value of the Grade Nos. field.';

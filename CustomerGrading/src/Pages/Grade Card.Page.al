@@ -31,6 +31,11 @@ page 50130 "Grade Card"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Description field.';
                 }
+                field("No. Series"; Rec."No. Series")
+                {
+                    ToolTip = 'Specifies the value of the No. Series field.';
+                }
+
             }
         }
         area(FactBoxes)
