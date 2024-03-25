@@ -1,7 +1,12 @@
-page 50134 "Grade History List Part"
+page 50134 "Grade History Factbox"
 {
     PageType = ListPart;
     SourceTable = "Grade History";
+    ApplicationArea = All;
+    UsageCategory = Administration;
+    Caption = 'Grade History List';
+    Editable = false;
+    DataCaptionFields = "Customer No.", "Customer Name";
 
     layout
     {

@@ -1,8 +1,8 @@
 table 50132 "Grade History"
 {
     DataClassification = CustomerContent;
-    // LookupPageId = "Grade History List";
-    // DrillDownPageId = "Grade History List";
+    LookupPageId = "Grade History List";
+    DrillDownPageId = "Grade History List";
 
     fields
     {
@@ -30,11 +30,14 @@ table 50132 "Grade History"
         {
             DataClassification = CustomerContent;
             Caption = 'Customer No.';
+            TableRelation = Customer;
         }
         field(6; "Customer Name"; Text[100])
         {
-            DataClassification = CustomerContent;
             Caption = 'Customer Name';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Customer.Name where("No." = field("Customer No.")));
+            Editable = false;
         }
         field(7; DateTime; dateTime)
         {
@@ -53,8 +56,10 @@ table 50132 "Grade History"
         }
         field(10; "Grade Description"; Text[100])
         {
-            DataClassification = CustomerContent;
             Caption = 'Grade Description';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Grade.Description where("No." = field(Grade)));
+            Editable = false;
         }
     }
 
@@ -65,33 +70,4 @@ table 50132 "Grade History"
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-        // Add changes to field groups here
-    }
-
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
-
 }

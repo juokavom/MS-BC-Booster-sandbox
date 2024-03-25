@@ -6,7 +6,7 @@ page 50133 "Grade History List"
     SourceTable = "Grade History";
     Caption = 'Grade History List';
     Editable = false;
-    // DataCaptionFields =
+    DataCaptionFields = "Customer No.", "Customer Name";
 
     layout
     {
