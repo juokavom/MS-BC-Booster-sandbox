@@ -17,6 +17,14 @@ page 50130 "Grade Card"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the No. field.';
+
+                    trigger OnAssistEdit()
+                    var
+                        GradeRec: Record Grade;
+                    begin
+                        if GradeRec.AssistEdit(xRec) then
+                            CurrPage.Update;
+                    end;
                 }
                 field(Description; Rec.Description)
                 {
