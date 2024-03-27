@@ -12,7 +12,6 @@ tableextension 50131 "Customer Ext" extends Customer
             trigger OnValidate()
             begin
                 CalcFields("Grade Description");
-                OnAfterValidate(Rec);
             end;
         }
         field(50131; "Grade Description"; Text[100])
@@ -23,9 +22,4 @@ tableextension 50131 "Customer Ext" extends Customer
             Editable = false;
         }
     }
-
-    [IntegrationEvent(true, false)]
-    local procedure OnAfterValidate(CustomerRec: Record Customer)
-    begin
-    end;
 }

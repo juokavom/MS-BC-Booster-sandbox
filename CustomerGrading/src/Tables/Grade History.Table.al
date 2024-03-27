@@ -72,10 +72,10 @@ table 50132 "Grade History"
     }
 
     procedure InsertIntoGradeHistory(
+        "Prop Customer No.": Code[20];
+        "Prop Document Date": Date;
         "Prop Document Type": Text[100];
         "Prop Document No.": Code[20];
-        "Prop Document Date": Date;
-        "Prop Customer No.": Code[20];
         "Prop Grade": Code[20]
         )
     var
