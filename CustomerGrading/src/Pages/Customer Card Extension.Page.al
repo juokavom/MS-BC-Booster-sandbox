@@ -17,5 +17,12 @@ pageextension 50131 "Customer Card Ext" extends "Customer Card"
                 ToolTip = 'Specifies the value of the Grade Description field.';
             }
         }
+        addfirst(factboxes)
+        {
+            part("Grade History Factbox"; "Grade History Factbox")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
 }

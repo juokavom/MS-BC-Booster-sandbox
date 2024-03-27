@@ -17,5 +17,12 @@ pageextension 50136 "Sales Credit Memo Ext" extends "Sales Credit Memo"
                 ToolTip = 'Specifies the value of the Grade Description field.';
             }
         }
+        addfirst(factboxes)
+        {
+            part("Grade History Factbox"; "Grade History Factbox")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
 }

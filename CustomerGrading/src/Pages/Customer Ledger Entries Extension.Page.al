@@ -17,5 +17,12 @@ pageextension 50134 "Customer Ledger Entries Ext" extends "Customer Ledger Entri
                 ToolTip = 'Specifies the value of the Grade Description field.';
             }
         }
+        addfirst(factboxes)
+        {
+            part("Grade History Factbox"; "Grade History Factbox")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
 }

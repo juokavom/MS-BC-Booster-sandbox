@@ -17,5 +17,12 @@ pageextension 50132 "Customer List Ext" extends "Customer List"
                 ToolTip = 'Specifies the value of the Grade Description field.';
             }
         }
+        addfirst(factboxes)
+        {
+            part("Grade History Factbox"; "Grade History Factbox")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
 }

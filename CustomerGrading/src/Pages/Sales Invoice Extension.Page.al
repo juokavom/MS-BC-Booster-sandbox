@@ -17,5 +17,12 @@ pageextension 50135 "Sales Invoice Ext" extends "Sales Invoice"
                 ToolTip = 'Specifies the value of the Grade Description field.';
             }
         }
+        addfirst(factboxes)
+        {
+            part("Grade History Factbox"; "Grade History Factbox")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
 }
