@@ -22,6 +22,7 @@ pageextension 50135 "Sales Invoice Ext" extends "Sales Invoice"
             part("Grade History Factbox"; "Grade History Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer No." = field("Bill-to Customer No.");
             }
         }
     }

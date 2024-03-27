@@ -22,6 +22,7 @@ pageextension 50133 "Sales Order Ext" extends "Sales Order"
             part("Grade History Factbox"; "Grade History Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer No." = field("Bill-to Customer No.");
             }
         }
     }

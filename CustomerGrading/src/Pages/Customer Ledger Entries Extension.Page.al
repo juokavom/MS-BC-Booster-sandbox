@@ -22,6 +22,7 @@ pageextension 50134 "Customer Ledger Entries Ext" extends "Customer Ledger Entri
             part("Grade History Factbox"; "Grade History Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer No." = field("Customer No.");
             }
         }
     }

@@ -22,6 +22,7 @@ pageextension 50136 "Sales Credit Memo Ext" extends "Sales Credit Memo"
             part("Grade History Factbox"; "Grade History Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer No." = field("Bill-to Customer No.");
             }
         }
     }

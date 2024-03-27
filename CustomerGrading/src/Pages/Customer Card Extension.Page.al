@@ -22,6 +22,7 @@ pageextension 50131 "Customer Card Ext" extends "Customer Card"
             part("Grade History Factbox"; "Grade History Factbox")
             {
                 ApplicationArea = All;
+                SubPageLink = "Customer No." = field("No.");
             }
         }
     }
