@@ -70,4 +70,37 @@ table 50132 "Grade History"
             Clustered = true;
         }
     }
+
+    procedure InsertIntoGradeHistory(
+        "Prop Document Type": Text[100];
+        "Prop Document No.": Code[20];
+        "Prop Document Date": Date;
+        "Prop Customer No.": Code[20];
+        "Prop Grade": Code[20]
+        )
+    var
+        GradeHistoryRec: Record "Grade History";
+        NewEntryNo: Integer;
+    begin
+        Clear(GradeHistoryRec);
+
+        NewEntryNo := 1;
+        if GradeHistoryRec.FindLast() then begin
+            NewEntryNo := GradeHistoryRec."Entry No." + 1;
+        end;
+
+        Clear(GradeHistoryRec);
+
+        GradeHistoryRec."Entry No." := NewEntryNo;
+        GradeHistoryRec."Document Type" := "Prop Document Type";
+        GradeHistoryRec."Document No." := "Prop Document No.";
+        GradeHistoryRec."Document Date" := "Prop Document Date";
+        GradeHistoryRec."Customer No." := "Prop Customer No.";
+        GradeHistoryRec.DateTime := CurrentDateTime();
+        GradeHistoryRec."User ID" := CopyStr(UserId(), 1, MaxStrLen(Rec."User ID"));
+        GradeHistoryRec.Grade := "Prop Grade";
+
+        GradeHistoryRec.Insert();
+        Clear(GradeHistoryRec);
+    end;
 }
