@@ -1,8 +1,8 @@
 {
-  "id": "ea0cc6e0-ff20-4c93-805e-e1507589844c",
-  "name": "Customer Grading",
-  "publisher": "Jokūbas Akramas Navitrans",
-  "version": "1.0.0.1",
+  "id": "6fe2d9f0-0fdd-4af5-abc1-d7d482cd4a89",
+  "name": "Reporting",
+  "publisher": "Jokubas Akramas Navitrans",
+  "version": "1.0.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -16,7 +16,7 @@
   "application": "23.0.0.0",
   "idRanges": [
     {
-      "from": 50130,
+      "from": 50140,
       "to": 50149
     }
   ],
