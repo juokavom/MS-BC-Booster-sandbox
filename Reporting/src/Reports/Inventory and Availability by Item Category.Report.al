@@ -4,6 +4,7 @@ report 50141 "Inv and Avail by Itm Cat"
     ApplicationArea = All;
     Caption = 'Inventory and Availability, by Item Category';
     RDLCLayout = './src/Reports/Inventory_And_Availability_By_Item_Category.rdl';
+    ExcelLayout = './src/Reports/Inventory_And_Availability_By_Item_Category.xlsx';
 
     dataset
     {
