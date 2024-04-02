@@ -352,14 +352,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox2">
+                        <Textbox Name="Textbox7">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Inventory.Value)+Sum(Fields!Qty_On_Purchase_Order.Value)-Sum(Fields!Qty_On_Sales_Order.Value)</Value>
+                                  <Value>=Sum(Fields!Availability.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -368,7 +368,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -555,21 +555,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox3">
+                        <Textbox Name="Availability">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Inventory.Value+Fields!Qty_On_Purchase_Order.Value-Fields!Qty_On_Sales_Order.Value</Value>
+                                  <Value>=Fields!Availability.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <rd:DefaultName>Availability</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -885,29 +885,11 @@
       </DefaultValue>
       <Prompt>InventoryCaption</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Qty_On_Purchase_OrderCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Qty_On_Purchase_OrderCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Qty_On_Purchase_OrderCaption</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Qty_On_Sales_OrderCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Qty_On_Sales_OrderCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Qty_On_Sales_OrderCaption</Prompt>
-    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>9</NumberOfRows>
+      <NumberOfRows>7</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -943,16 +925,6 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>6</RowIndex>
           <ParameterName>InventoryCaption</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>7</RowIndex>
-          <ParameterName>Qty_On_Purchase_OrderCaption</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>8</RowIndex>
-          <ParameterName>Qty_On_Sales_OrderCaption</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
@@ -1017,17 +989,11 @@ End Function
         <Field Name="InventoryFormat">
           <DataField>InventoryFormat</DataField>
         </Field>
-        <Field Name="Qty_On_Purchase_Order">
-          <DataField>Qty_On_Purchase_Order</DataField>
+        <Field Name="Availability">
+          <DataField>Availability</DataField>
         </Field>
-        <Field Name="Qty_On_Purchase_OrderFormat">
-          <DataField>Qty_On_Purchase_OrderFormat</DataField>
-        </Field>
-        <Field Name="Qty_On_Sales_Order">
-          <DataField>Qty_On_Sales_Order</DataField>
-        </Field>
-        <Field Name="Qty_On_Sales_OrderFormat">
-          <DataField>Qty_On_Sales_OrderFormat</DataField>
+        <Field Name="AvailabilityFormat">
+          <DataField>AvailabilityFormat</DataField>
         </Field>
       </Fields>
       <Query>

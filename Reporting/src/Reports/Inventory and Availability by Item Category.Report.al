@@ -36,13 +36,9 @@ report 50141 "Inv and Avail by Itm Cat"
                 {
                     IncludeCaption = true;
                 }
-                column(Qty_On_Purchase_Order; "Qty. on Purch. Order")
+                column(Availability; Inventory - "Qty. on Sales Order" + "Qty. on Purch. Order")
                 {
-                    IncludeCaption = true;
-                }
-                column(Qty_On_Sales_Order; "Qty. on Sales Order")
-                {
-                    IncludeCaption = true;
+
                 }
             }
         }
