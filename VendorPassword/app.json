@@ -1,0 +1,45 @@
+{
+    "id": "455c78df-46fc-49dd-ad14-31a9754f58d0",
+    "name": "Vendor Password",
+    "publisher": "Jokubas Akramas Navitrans",
+    "version": "1.0.0.0",
+    "brief": "",
+    "description": "",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [
+        {
+            "id": "ADC18994-073B-4840-A144-2A5E3A0D9D1E",
+            "name": "DIOT - Localization for Mexico",
+            "publisher": "Microsoft",
+            "version": "23.5.16502.17532"
+        },
+        {
+            "id": "7C7D97CA-3598-40F5-B263-F713F49BD2A5",
+            "name": "Dynamics GP Historical Data",
+            "publisher": "Microsoft",
+            "version": "23.5.16502.17532"
+        }
+    ],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "23.0.0.0",
+    "idRanges": [
+        {
+            "from": 50100,
+            "to": 50149
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "12.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}
