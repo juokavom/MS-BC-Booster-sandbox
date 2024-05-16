@@ -63,6 +63,7 @@ table 50120 Movie
 
     fieldgroups
     {
-        fieldgroup(Brick; "No.", Title, Year, Genre, Score) { }
+        fieldgroup(Brick; "No.", Title, Year, Genre, Score, Image) { }
+        fieldgroup(DropDown; "No.", Title, Year) { }
     }
 }

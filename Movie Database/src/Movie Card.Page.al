@@ -45,10 +45,6 @@ page 50120 "Movie Card"
                 {
                     ToolTip = 'Specifies the value of the Score field.';
                 }
-                field(Image; Rec.Image)
-                {
-                    ToolTip = 'Specifies the value of the Image field.';
-                }
             }
         }
 
@@ -56,43 +52,10 @@ page 50120 "Movie Card"
         {
             part("Poster Part"; "Poster Part")
             {
+                Caption = 'Movie Poster';
                 ApplicationArea = All;
                 SubPageLink = "No." = field("No.");
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(Upload)
-            {
-                ApplicationArea = All;
-                Caption = 'Upload Poster';
-                Image = Calculate;
-                Promoted = true;
-                PromotedIsBig = true;
-                PromotedCategory = Process;
-
-                trigger OnAction()
-                begin
-                    UploadPoster();
-                end;
-            }
-        }
-    }
-
-
-    procedure UploadPoster()
-    var
-        InStr: InStream;
-        FileName: Text;
-    begin
-        if File.UploadIntoStream('Import Movie Poster', '', 'JPG Files (*.jpg)|*.jpg', FileName, InStr) then begin
-            Clear(Rec.Image);
-            Rec.Image.ImportStream(InStr, Rec.Title);
-            Rec.Modify();
-        end;
-    end;
 }

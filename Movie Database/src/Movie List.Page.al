@@ -6,6 +6,7 @@ page 50121 "Movie List"
     SourceTable = Movie;
     Caption = 'Movies';
     CardPageId = "Movie Card";
+    Editable = false;
 
     layout
     {
@@ -49,6 +50,23 @@ page 50121 "Movie List"
                 {
                     ToolTip = 'Specifies the value of the Score field.';
                 }
+            }
+        }
+    }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(SearchOnOMDb)
+            {
+                ApplicationArea = All;
+                Caption = 'Search on OMDb';
+                Image = MoveDown;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                RunObject = Codeunit "OMDb Management";
             }
         }
     }
