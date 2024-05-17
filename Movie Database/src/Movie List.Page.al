@@ -68,6 +68,33 @@ page 50121 "Movie List"
                 PromotedCategory = Process;
                 RunObject = Codeunit "OMDb Management";
             }
+            action(BackupMovies)
+            {
+                ApplicationArea = All;
+                Caption = 'Backup Movies';
+                Image = Save;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                begin
+                    RunBackupMovies();
+                end;
+            }
         }
     }
+
+    procedure RunBackupMovies()
+    var
+        MovieSetup: Record "Movie Setup";
+        Backup: Interface IBackup;
+    begin
+        Backup := MovieSetup.GetBackupType();
+
+        Clear(Rec);
+        if not Rec.FindSet() then exit;
+        Backup.Backup(Rec);
+    end;
+
 }
