@@ -11,7 +11,7 @@ codeunit 50135 "Azure Storage Helper"
     var
         ABSBlobClient: Codeunit "ABS Blob Client";
     begin
-        ABSBlobClient.DeleteBlob();
+        // ABSBlobClient.DeleteBlob();
     end;
 
     procedure DownloadAttachmentFromAzureStorage(FileName: Text; FileExtension: Text): Boolean
