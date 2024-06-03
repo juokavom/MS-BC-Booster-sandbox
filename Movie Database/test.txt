@@ -1,0 +1,12 @@
+[SCENARIO 004] request room preparation for a cleaned room with no existing service requests
+[GIVEN] a room that is clean
+[GIVEN] no existing requests for this room
+[WHEN] the planner selects “Prepare for arrival” for the room 
+[THEN] a ‘prepare for arrival’ request is added to the request list
+
+[SCENARIO 005] request room preparation for a room that is not cleaned and has no existing service requests
+[GIVEN] a room that is not cleaned
+[GIVEN] no existing service requests for this room
+[WHEN] the planner selects “Prepare for arrival” for the room
+[THEN] an error message comes up saying “Status can not be In Use when requesting Prepare for Arrival”
+[THEN] there is no new service request added for this room
