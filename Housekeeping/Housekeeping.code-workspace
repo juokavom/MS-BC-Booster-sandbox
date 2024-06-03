@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "Housekeeping Test"
+		},
+		{
+			"path": "Housekeeping"
+		}
+	],
+	"settings": {
+		"al.codeAnalyzers": [
+		
+		],
+		"al.packageCachePath": "../.alpackages"
+	}
+}
